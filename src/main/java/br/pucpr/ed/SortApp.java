@@ -4,7 +4,7 @@ import br.pucpr.ed.list.SortableArrayList;
 import br.pucpr.ed.list.List;
 import br.pucpr.ed.list.ListSort;
 
-public class SearchApp {
+public class SortApp {
 
     public static void main(String[] args) {
         List<Integer> numberList = createSortableList();
