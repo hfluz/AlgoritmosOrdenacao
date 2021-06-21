@@ -16,6 +16,11 @@ public class SortApp {
         System.out.println("Lista não ordenada: " + numberList);
         listaOrdenada = ListSort.mergeSort((SortableArrayList) numberList);
         System.out.println("Lista ordenada com merge-sort: " + listaOrdenada);
+
+        numberList = createSortableList();
+        System.out.println("Lista não ordenada: " + numberList);
+        listaOrdenada = ListSort.heapSort((SortableArrayList) numberList);
+        System.out.println("Lista ordenada com heap-sort: " + listaOrdenada);
     }
 
     /**

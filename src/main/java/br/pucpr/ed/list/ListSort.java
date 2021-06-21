@@ -1,5 +1,7 @@
 package br.pucpr.ed.list;
 
+import br.pucpr.ed.tree.Heap;
+
 public class ListSort {
     /**
      * Exercício 1
@@ -39,5 +41,16 @@ public class ListSort {
 
     private static int partitionList(SortableArrayList list, int left, int right) {
         return 0;
+    }
+
+    public static SortableArrayList heapSort(SortableArrayList list) {
+        Heap<Comparable> heap = new Heap<>(list.array.length);
+        for (int i= 0; i < list.size; i++) {
+            heap.insert(list.get(i));
+        }
+        for (int i= 0; i < list.size; i++) {
+            list.set(i,heap.remove());
+        }
+        return list;
     }
 }
